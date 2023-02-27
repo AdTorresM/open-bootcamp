@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Radiobutton, StringVar, Label, Button, Tk
 
 """
 En este ejercicio tenéis que crear una lista de RadioButton que muestre la opción que se ha seleccionado y que contenga un botón de reinicio para que deje todo como al principio.
