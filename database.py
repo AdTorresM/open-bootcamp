@@ -5,7 +5,7 @@ conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
 cursor.execute("""
-            CREATE TABLE if not exists alumno (
+            CREATE TABLE if not exists alumnos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nombre TEXT NOT NULL,
                 apellido TEXT NOT NULL
@@ -14,7 +14,7 @@ cursor.execute("""
 
 
 def crear(nombre, apellido):
-    query = f"INSERT INTO alumno(nombre, apellido) VALUES(?, ?)"
+    query = f"INSERT INTO alumnos(nombre, apellido) VALUES(?, ?)"
     cursor.execute(query, (nombre, apellido))
     conn.commit()
 
@@ -28,7 +28,7 @@ crear('Bernardo', 'Corona')
 crear('Rodolfo', 'Orea')
 crear('Gabriel', 'Valdez')
 
-query = 'SELECT * FROM alumno'
+query = 'SELECT * FROM alumnos'
 data2 = cursor.execute(query)
 for a in data2:
     print(a)
