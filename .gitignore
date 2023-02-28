@@ -1,1 +1,5 @@
 modulos/__pycache__
+django/catalogo/migrations
+django/catalogo/__pycache__
+django/cine/__pycache__
+

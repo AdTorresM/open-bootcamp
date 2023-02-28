@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directores de Cine</title>
+</head>
+<body>
+    {% if director %}
+        {% for d in director  %}
+            <ul><a href="{% url 'peliculas' d.id %}">{{d.nombre }}</a></ul>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
